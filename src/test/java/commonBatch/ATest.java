@@ -7,6 +7,7 @@ import java.util.List;
 import junit.framework.Assert;
 
 import org.fest.assertions.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;
@@ -14,6 +15,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.google.common.collect.Lists;
 @RunWith(MockitoJUnitRunner.class)
+@Ignore
 public class ATest {
     @Spy 
     private List<String> list = Lists.newArrayList("slawek","borowiec");

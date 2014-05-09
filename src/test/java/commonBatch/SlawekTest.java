@@ -17,6 +17,10 @@ import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 
 import org.junit.Test;
+/**
+ * @author przodownik
+ *
+ */
 @Slf4j
 public class SlawekTest {
     

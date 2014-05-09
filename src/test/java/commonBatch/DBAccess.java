@@ -1,5 +1,9 @@
 package commonBatch;
 
+/**
+ * @author przodownik
+ *
+ */
 public class DBAccess {
     
     public String countUserInUserTable(){

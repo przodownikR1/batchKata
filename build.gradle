@@ -3,19 +3,20 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'project-report'
+apply plugin: 'pmd'
 apply plugin: 'application'
 apply plugin: 'build-dashboard'
 apply plugin: 'codenarc'
 apply from: './properties.gradle'
 
 
-description = "batch kata"
+description = "common batch"
 
 applicationDefaultJvmArgs = ["-Dfile.encoding=UTF=8"]
 libsDirName = './target'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 [compileJava, compileTestJava]*.options*.compilerArgs = [
     "-Xlint:none",
@@ -52,6 +53,8 @@ dependencies {
     compile ("org.springframework:spring-context:${springVersion}")
     compile("org.springframework.batch:spring-batch-core:${springBatchVersion}")
     compile ("org.springframework:spring-tx:${springVersion}")
+    
+    compile ("pl.java.scalatech:commonDao:0.0.1")
     testCompile ("org.springframework:spring-test:${springVersion}")
     
     compile("org.projectlombok:lombok:${lombokVersion}")
@@ -91,12 +94,12 @@ task listJars << {
 }
 
 jar {
-    baseName = 'batchKata'
+    baseName = 'commonBatch'
     version =  '0.0.1'
 
     exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
     manifest {
-        attributes 'Implementation-Title': 'Gradle camel-cxf',
+        attributes 'Implementation-Title': 'Gradle batchKata',
         'Implementation-Version': version,
         'Built-By': System.getProperty('user.name'),
         'Built-Date': new Date(),
