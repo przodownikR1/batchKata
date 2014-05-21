@@ -17,8 +17,10 @@
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 			http://www.springframework.org/schema/batch  http://www.springframework.org/schema/batch/spring-batch.xsd">
 		
+
     
-      <context:property-placeholder location="classpath:batch.properties" order="1000" />
+    <context:property-placeholder location="classpath:batch.properties" order="1000" />
+    
             
     <alias name="transactionManager" alias="transactionBatchManager" />
     
@@ -38,6 +40,7 @@
 	<bean id="jobRegistry" class="org.springframework.batch.core.configuration.support.MapJobRegistry" />
 
     <bean class="org.springframework.batch.core.configuration.support.JobRegistryBeanPostProcessor" p:jobRegistry-ref="jobRegistry"/>
-        
+    
+    <import resource="classpath:commonDao.xml"/>
     
 </beans>

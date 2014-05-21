@@ -2,6 +2,7 @@ package commonBatch.bootstap;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -10,7 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:commonDao.xml,classpath:spring-batch.xml" })
+@ContextConfiguration(locations = { "classpath:spring-batch.xml" })
+@ActiveProfiles(profiles="dev")
 public class LoadContextTest {
 
     @Test
