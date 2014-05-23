@@ -23,5 +23,5 @@ ext {
       mysqlVersion = "5.1.29"   
       postgresqlVersion = "9.3-1101-jdbc41"
       jasyptVersion = "1.9.2"
-      springBatchVersion = "2.2.6.RELEASE"
+      springBatchVersion = "3.0.0.RELEASE"
 }
